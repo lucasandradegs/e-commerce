@@ -1,5 +1,6 @@
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
+import SensorFingerprint from '@/util/fingerprint'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -37,6 +38,7 @@ export default async function Home() {
           quality={100}
           alt=""
         />
+        <SensorFingerprint />
 
         <div className="absolute bottom-28 right-28 h-12 flex items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-900 bg-black/60 p-1 pl-5">
           <span className="text-sm truncate">{highLightedProduct.title}</span>
